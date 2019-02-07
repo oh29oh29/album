@@ -16,8 +16,17 @@ public class Post {
     private String id;
 
     @Column
+    private String categoryId;
+
+    @Column
     private String description;
 
     @Column
-    private String date;
+    private String uploadDate;
+
+    @Column
+    private String realDate;
+
+    @Column
+    private String imageUrl;
 }
