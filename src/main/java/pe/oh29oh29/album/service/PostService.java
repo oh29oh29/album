@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class PostService {
 
-    public List<Post> getPosts() {
+    public List<Post> getPosts(String categoryId) {
         List<Post> postList = new ArrayList<>();
         Post post1 = Post.builder().id("1").description("testDesc").date("20190101").build();
         Post post2 = Post.builder().id("2").description("testDesc").date("20190101").build();
@@ -30,5 +30,10 @@ public class PostService {
         postList.add(post8);
         postList.add(post9);
         return postList;
+    }
+
+    public Post getPost(String postId) {
+        Post post = Post.builder().id("1").description("testDesc").date("20190101").build();
+        return post;
     }
 }
